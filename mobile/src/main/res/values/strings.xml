@@ -24,6 +24,13 @@
 <p><b>Download source from</b><br/><a href="https://github.com/pocmo/SensorDashboard">https://github.com/pocmo/SensorDashboard</a></p>
 <p>Distributed under Apache 2 License</p>
 ]]></string>
+    <string name="title_activity_barometer">barometerActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

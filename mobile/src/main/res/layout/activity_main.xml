@@ -28,7 +28,13 @@
             android:gravity="center"
             android:text="Waiting for sensor input from a wearable.."
             android:textSize="24sp"/>
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/barometerTest"
+            android:onClick="gotoBarometer"
+            android:text="上下楼预测"/>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"

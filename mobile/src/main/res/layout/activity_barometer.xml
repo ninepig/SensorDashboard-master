@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:orientation="vertical"
+    tools:context="com.github.pocmo.sensordashboard.barometerActivity">
+
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=" "
+           android:textStyle="bold"
+           android:textSize="30sp"
+           android:id="@+id/tv_currentPressure"/>
+
+       <!--<Button-->
+           <!--android:layout_width="wrap_content"-->
+           <!--android:id="@+id/button_recordPressure"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--android:layout_gravity="center"-->
+           <!--android:text="记录"-->
+           <!--android:textSize="25sp"-->
+           <!--android:onClick="recordCurrentPressure"/>-->
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="记录气压"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="30sp"-->
+            <!--android:id="@+id/tv_recordPressure"/>-->
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:id="@+id/button_stepRecord"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="开始计步"-->
+            <!--android:textSize="25sp"-->
+            <!--android:onClick="beginRecordStep"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上下楼："
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:id="@+id/tv_predictUPorDown"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预测步数："
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:id="@+id/tv_predictStep"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:layout_gravity="center"
+            android:id="@+id/tv_predictStepCounter"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

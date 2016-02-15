@@ -321,8 +321,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
-                map.put("id", "wenjingYangID");
-                map.put("coll", "wenjingTest");
+                map.put("id", "wenjingYangTest");
+                map.put("coll", "newTest");
 
                 JSONObject abc = new JSONObject();
 
@@ -366,7 +366,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Subscribe
     public void onNewSensorEvent(final NewSensorEvent event) {
-        Log.i("wenjingInfoGetEvent", "" + event.getSensor().getName()+event.getSensor().getMaxValue());
+        Log.i("wenjingInfoGetEvent", "" + event.getSensor().getName() + event.getSensor().getMaxValue());
 
 //        ((ScreenSlidePagerAdapter) pager.getAdapter()).addNewSensor(event.getSensor());
 //        pager.getAdapter().notifyDataSetChanged();
@@ -380,16 +380,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         + "sensor minValue" + event.getSensor().getMinValue() + "thisPointTimeStamp" + event.getDataPoint().getTimestamp() + "thisPointAcuracy" +
                         event.getDataPoint().getAccuracy() + "thisPointValue" + Arrays.toString(event.getDataPoint().getValues())
         );
-//        if(postCount == 6){
+
+
+        if(event.getDataPoint().getValues()!=null) {
             TestPost(event);
-//            postCount = 0 ;
-//        }
-//        postCount++;
+        }
 
         testSHowingVIew.setText(event.getSensor().getName());
     }
 
 
+    public void gotoBarometer(View view){
 
+        Intent gotoNewAct = new Intent(this,barometerActivity.class);
+        startActivity(gotoNewAct);
+
+    }
 
 }

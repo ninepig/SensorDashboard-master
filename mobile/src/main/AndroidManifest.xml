@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.github.pocmo.sensordashboard">
+    package="com.github.pocmo.sensordashboard" >
 
     <uses-permission android:name="android.permission.BODY_SENSORS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -9,40 +9,47 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
+            android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.github.pocmo.sensordashboard.MainActivity"
-            android:label="@string/app_name">
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
-            android:name="com.github.pocmo.sensordashboard.AboutActivity"
-            android:label="@string/action_about">
+            android:name=".AboutActivity"
+            android:label="@string/action_about" >
+        </activity>
+        <activity
+            android:name=".ui.ExportActivity"
+            android:label="@string/action_export"
+            android:parentActivityName=".MainActivity" >
         </activity>
 
-        <activity
-            android:name="com.github.pocmo.sensordashboard.ui.ExportActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/action_export">
-        </activity>
-
-
-        <service android:name=".SensorReceiverService">
+        <service android:name=".SensorReceiverService" >
             <intent-filter>
-                <action
-                    android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".barometerActivity"
+            android:label="@string/title_activity_barometer" >
+        </activity>
+
+        <service android:name=".PressureService" >
+            <intent-filter>
+                <action android:name="com.github.pocmo.sensordashboard.PressureService" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
